@@ -19,7 +19,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 }) => {
   return (
     <aside
-      className={`w-64 h-52 bg-white mr-2 rounded-lg dark:bg-gray-800 overflow-y-auto dark:border-gray-700 md:block`}
+      className={`w-full md:w-64 h-52 bg-white mr-2 rounded-lg dark:bg-gray-800 overflow-y-auto dark:border-gray-700 md:block mb-4 md:mb-0`}
     >
       <div className="p-2 space-y-1">
         <h2 className="text-gray-800 dark:text-white">Settings</h2>

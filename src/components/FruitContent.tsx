@@ -33,7 +33,7 @@ export default function FruitContent({ fruit, fontSize }: FruitContentProps) {
   return (
     <Card className="max-w-4xl mx-auto bg-white dark:bg-gray-800">
       <CardContent className="flex flex-1 space-x-2 p-0">
-        <div className="mt-10 p-2">
+        <div className="mt-10 p-2 hidden lg:block">
           <SocialShareButtons />
         </div>
         <div className="p-6 space-y-6">

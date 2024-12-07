@@ -5,6 +5,7 @@ import { products } from "./data/products";
 import { Sidebar } from "./components/Sidebar";
 import VerticalNav from "./components/VerticalNav";
 import FruitContent from "./components/FruitContent";
+import { FruitDropdown } from "./components/FruitDropdown";
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
@@ -42,26 +43,57 @@ function App() {
         />
       </header>
 
-      <div className="flex flex-1">
-        <VerticalNav />
-        <div className="flex flex-1 round-lg gap-x-2 mt-3 overflow-hidden bg-gray-300">
-          <Sidebar
-            products={filteredProducts}
-            selectedProduct={selectedProduct}
-            onSelectProduct={setSelectedProduct}
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-          />
-          <FruitContent fruit={selectedProduct} fontSize={fontSize} />
-          {showSettings ? (
-            <SettingsPanel
-              fontSize={fontSize}
-              setFontSize={setFontSize}
-              vitaminType={vitaminType}
-              setVitaminType={setVitaminType}
-              availableVitamins={availableVitamins}
+      <div className="flex flex-1 lg:flex-row">
+        <div className="hidden lg:block">
+          <VerticalNav />
+        </div>
+        <div className="flex flex-col lg:flex-row flex-1 round-lg mt-3 overflow-hidden bg-gray-300">
+          <div className="lg:hidden p-2">
+            <FruitDropdown
+              products={filteredProducts}
+              selectedProduct={selectedProduct}
+              onSelectProduct={setSelectedProduct}
             />
-          ) : null}
+          </div>
+          <div className="hidden lg:block">
+            <Sidebar
+              products={filteredProducts}
+              selectedProduct={selectedProduct}
+              onSelectProduct={setSelectedProduct}
+              searchQuery={searchQuery}
+              setSearchQuery={setSearchQuery}
+            />
+          </div>
+          <div className="flex flex-col ml-2 lg:flex-row flex-1">
+            {showSettings && (
+              <div className="lg:hidden">
+                <SettingsPanel
+                  fontSize={fontSize}
+                  setFontSize={setFontSize}
+                  vitaminType={vitaminType}
+                  setVitaminType={setVitaminType}
+                  availableVitamins={availableVitamins}
+                />
+              </div>
+            )}
+            <FruitContent fruit={selectedProduct} fontSize={fontSize} />
+            <div className="ml-2">
+              {showSettings && (
+                <div className="hidden lg:block">
+                  <SettingsPanel
+                    fontSize={fontSize}
+                    setFontSize={setFontSize}
+                    vitaminType={vitaminType}
+                    setVitaminType={setVitaminType}
+                    availableVitamins={availableVitamins}
+                  />
+                </div>
+              )}
+            </div>
+          </div>
+          <div className="lg:hidden">
+            <VerticalNav />
+          </div>
         </div>
       </div>
     </div>
