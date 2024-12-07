@@ -33,9 +33,23 @@ export const products: product[] = [
           "Avocados are rich in heart-friendly monounsaturated fats, primarily oleic acid, which has been shown to reduce bad cholesterol (LDL) and increase good cholesterol (HDL) levels. They are also a great source of potassium, which helps regulate blood pressure and prevents hypertension, a major risk factor for heart disease. With their fiber content, avocados can also improve overall cardiovascular health by reducing inflammation and supporting healthy blood vessels. Including avocados in your diet can be an easy way to protect your heart and promote overall well-being.",
         icon: "Heart",
       },
+      {
+        title: "Supports heart health",
+        description:
+          "Avocados are rich in heart-friendly monounsaturated fats, primarily oleic acid, which has been shown to reduce bad cholesterol (LDL) and increase good cholesterol (HDL) levels. They are also a great source of potassium, which helps regulate blood pressure and prevents hypertension, a major risk factor for heart disease. With their fiber content, avocados can also improve overall cardiovascular health by reducing inflammation and supporting healthy blood vessels. Including avocados in your diet can be an easy way to protect your heart and promote overall well-being.",
+        icon: "Heart",
+      },
+      {
+        title: "Supports heart health",
+        description:
+          "Avocados are rich in heart-friendly monounsaturated fats, primarily oleic acid, which has been shown to reduce bad cholesterol (LDL) and increase good cholesterol (HDL) levels. They are also a great source of potassium, which helps regulate blood pressure and prevents hypertension, a major risk factor for heart disease. With their fiber content, avocados can also improve overall cardiovascular health by reducing inflammation and supporting healthy blood vessels. Including avocados in your diet can be an easy way to protect your heart and promote overall well-being.",
+        icon: "Heart",
+      },
     ],
     images: [
       "https://images.immediate.co.uk/production/volatile/sites/2/2015/12/19432.jpg?quality=90&resize=556,505",
+      "https://avocadoscolombia.com/wp-content/uploads/2024/02/Avo-display-1.png",
+      "https://avocadoscolombia.com/wp-content/uploads/2024/02/Avo-display-1.png",
       "https://avocadoscolombia.com/wp-content/uploads/2024/02/Avo-display-1.png",
       "https://avocadoscolombia.com/wp-content/uploads/2024/02/Avo-display-1.png",
     ],

@@ -22,17 +22,20 @@ export function Sidebar({
   setSearchQuery,
 }: SidebarProps) {
   const [filteredProducts, setFilteredProducts] = useState(products);
+  const [activeTab, setActiveTab] = useState<"fruit" | "vegetable">("fruit");
 
   useEffect(() => {
-    const filtered = products.filter((product) =>
-      product.name.toLowerCase().includes(searchQuery.toLowerCase())
+    const filtered = products.filter(
+      (product) =>
+        product.name.toLowerCase().includes(searchQuery.toLowerCase()) &&
+        product.type === activeTab
     );
     setFilteredProducts(filtered);
-  }, [products, searchQuery]);
+  }, [products, searchQuery, activeTab]);
 
   return (
-    <div className="w-80 h-4/5 border-r bg-white rounded-xl flex flex-col ml-3">
-      <FruitTabs />
+    <div className="w-80 h-3/4 border-r bg-white rounded-xl flex flex-col ml-3">
+      <FruitTabs activeTab={activeTab} onTabChange={setActiveTab} />
       <div className="p-4">
         <SearchInput value={searchQuery} onChange={setSearchQuery} />
       </div>
