@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { SettingsPanel } from "./components/SettingsPanel";
 import { NavBar } from "./components/nav-bar";
 import { products } from "./data/products";
@@ -9,11 +9,22 @@ import FruitContent from "./components/FruitContent";
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
   const [darkMode, setDarkMode] = useState(false);
-  const [fontSize, setFontSize] = useState(16);
-  const [vitaminType, setVitaminType] = useState("letter");
-  const [showSidebar, setShowSidebar] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
+  const [fontSize, setFontSize] = useState(14);
+  const [vitaminType, setVitaminType] = useState("All");
+  const [showSidebar, setShowSidebar] = useState(true);
+  const [showSettings, setShowSettings] = useState(true);
   const [searchQuery, setSearchQuery] = useState("");
+
+  const availableVitamins = useMemo(() => {
+    const allVitamins = products.flatMap((product) => product.vitamins);
+    return [...new Set(allVitamins), "All"];
+  }, []);
+
+  const filteredProducts = useMemo(() => {
+    if (!vitaminType) return products;
+    if (vitaminType === "All") return products;
+    return products.filter((product) => product.vitamins.includes(vitaminType));
+  }, [vitaminType]);
 
   return (
     <div
@@ -35,21 +46,22 @@ function App() {
         <VerticalNav />
         <div className="flex flex-1 round-lg gap-x-2 mt-3 overflow-hidden bg-gray-300">
           <Sidebar
-            products={products}
+            products={filteredProducts}
             selectedProduct={selectedProduct}
             onSelectProduct={setSelectedProduct}
             searchQuery={searchQuery}
             setSearchQuery={setSearchQuery}
           />
           <FruitContent fruit={selectedProduct} fontSize={fontSize} />
-          <SettingsPanel
-            fontSize={fontSize}
-            setFontSize={setFontSize}
-            vitaminType={vitaminType}
-            setVitaminType={setVitaminType}
-            showSettings={showSettings}
-            setShowSettings={setShowSettings}
-          />
+          {showSettings ? (
+            <SettingsPanel
+              fontSize={fontSize}
+              setFontSize={setFontSize}
+              vitaminType={vitaminType}
+              setVitaminType={setVitaminType}
+              availableVitamins={availableVitamins}
+            />
+          ) : null}
         </div>
       </div>
     </div>

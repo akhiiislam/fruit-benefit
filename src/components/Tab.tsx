@@ -3,7 +3,7 @@
 import { Tabs, TabsList, TabsTrigger } from "./ui/tab";
 
 interface FruitTabsProps {
-  activeTab: "fruit" | "vegetable"; // Match product's type
+  activeTab: "fruit" | "vegetable";
   onTabChange: (tab: "fruit" | "vegetable") => void;
 }
 

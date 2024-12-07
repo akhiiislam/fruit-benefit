@@ -34,15 +34,20 @@ export function Sidebar({
   }, [products, searchQuery, activeTab]);
 
   return (
-    <div className="w-80 h-3/4 border-r bg-white rounded-xl flex flex-col ml-3">
+    <div className="w-72 h-3/4 border-r bg-white rounded-xl flex flex-col ml-3">
       <FruitTabs activeTab={activeTab} onTabChange={setActiveTab} />
       <div className="p-4">
-        <SearchInput value={searchQuery} onChange={setSearchQuery} />
+        <SearchInput
+          value={searchQuery}
+          onChange={setSearchQuery}
+          activeTab={activeTab}
+        />
       </div>
       <ProductList
         products={filteredProducts}
         selectedProduct={selectedProduct}
         onSelect={onSelectProduct}
+        activeTab={activeTab}
       />
     </div>
   );

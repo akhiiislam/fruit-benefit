@@ -7,8 +7,7 @@ interface SettingsPanelProps {
   setFontSize: (size: number) => void;
   vitaminType: string;
   setVitaminType: (type: string) => void;
-  showSettings: boolean;
-  setShowSettings: (show: boolean) => void;
+  availableVitamins: string[];
 }
 
 export const SettingsPanel: React.FC<SettingsPanelProps> = ({
@@ -16,14 +15,11 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
   setFontSize,
   vitaminType,
   setVitaminType,
-  showSettings,
-  setShowSettings,
+  availableVitamins,
 }) => {
   return (
     <aside
-      className={`w-64 h-52 bg-white mr-2 rounded-lg dark:bg-gray-800 overflow-y-auto dark:border-gray-700 ${
-        showSettings ? "block" : "hidden"
-      } md:block`}
+      className={`w-64 h-52 bg-white mr-2 rounded-lg dark:bg-gray-800 overflow-y-auto dark:border-gray-700 md:block`}
     >
       <div className="p-2 space-y-1">
         <h2 className="text-gray-800 dark:text-white">Settings</h2>
@@ -31,6 +27,7 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
         <VitaminTypeSelector
           vitaminType={vitaminType}
           setVitaminType={setVitaminType}
+          availableVitamins={availableVitamins}
         />
       </div>
     </aside>

@@ -5,18 +5,20 @@ interface ProductListProps {
   products: product[];
   selectedProduct: product;
   onSelect: (product: product) => void;
+  activeTab: "fruit" | "vegetable";
 }
 
 export function ProductList({
   products,
   selectedProduct,
   onSelect,
+  activeTab,
 }: ProductListProps) {
+  const Title = activeTab === "fruit" ? " Fruits List" : " Vegetables List";
+
   return (
     <div className="py-4">
-      <h2 className="px-4 text-sm font-medium text-gray-500 mb-2">
-        Fruits List
-      </h2>
+      <h2 className="px-4 text-sm font-medium text-gray-500 mb-2">{Title}</h2>
       <div className="space-y-1">
         {products.map((product) => (
           <button
