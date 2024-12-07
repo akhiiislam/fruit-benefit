@@ -12,7 +12,7 @@ export const DarkModeToggle: React.FC<DarkModeToggleProps> = ({
   return (
     <button
       onClick={() => setDarkMode(!darkMode)}
-      className="p-2 rounded-full bg-gray-200 dark:bg-gray-600"
+      className="p-1 rounded-full bg-gray-200 dark:bg-gray-600"
     >
       {darkMode ? "🌞" : "🌙"}
     </button>
