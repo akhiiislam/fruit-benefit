@@ -2,10 +2,10 @@ import React from "react";
 
 export const SocialShareButtons: React.FC = () => {
   return (
-    <div className="flex space-x-4">
+    <div className="flex flex-col space-y-4">
       <button className="p-2 bg-blue-500 text-white rounded-full">
         <svg
-          className="w-5 h-5"
+          className="w-3 h-3"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export const SocialShareButtons: React.FC = () => {
       </button>
       <button className="p-2 bg-blue-600 text-white rounded-full">
         <svg
-          className="w-5 h-5"
+          className="w-3 h-3"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export const SocialShareButtons: React.FC = () => {
       </button>
       <button className="p-2 bg-pink-600 text-white rounded-full">
         <svg
-          className="w-5 h-5"
+          className="w-3 h-3"
           fill="currentColor"
           viewBox="0 0 20 20"
           xmlns="http://www.w3.org/2000/svg"

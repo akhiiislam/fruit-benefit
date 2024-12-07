@@ -5,7 +5,7 @@ import { Tabs, TabsList, TabsTrigger } from "./ui/tab";
 export function FruitTabs() {
   return (
     <Tabs defaultValue="fruits" className="w-full">
-      <TabsList className="w-full h-12 bg-white border-b rounded-none">
+      <TabsList className="w-full h-12 bg-white border-b rounded-lg">
         <TabsTrigger
           value="fruits"
           className="flex-1 h-full rounded-none border-b-2 border-transparent data-[state=active]:border-orange-500 data-[state=active]:text-orange-500 font-medium"

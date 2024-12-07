@@ -15,8 +15,10 @@ function App() {
   const [searchQuery, setSearchQuery] = useState("");
 
   return (
-    <div className={`h-screen flex flex-col ${darkMode ? "dark" : ""}`}>
-      <header className="bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 p-4 flex justify-between items-center">
+    <div
+      className={`h-screen bg-gray-300 flex flex-col ${darkMode ? "dark" : ""}`}
+    >
+      <header className="bg-white p-1 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <NavBar
           darkMode={darkMode}
           setDarkMode={setDarkMode}
@@ -28,7 +30,7 @@ function App() {
         />
       </header>
 
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex flex-1 round-lg gap-x-2 mt-3 overflow-hidden bg-gray-300">
         <Sidebar
           products={products}
           selectedProduct={selectedProduct}
@@ -36,9 +38,7 @@ function App() {
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
         />
-        <main className="flex-1 overflow-y-auto bg-white dark:bg-gray-900">
-          <FruitContent fruit={selectedProduct} fontSize={fontSize} />
-        </main>
+        <FruitContent fruit={selectedProduct} fontSize={fontSize} />
         <SettingsPanel
           fontSize={fontSize}
           setFontSize={setFontSize}

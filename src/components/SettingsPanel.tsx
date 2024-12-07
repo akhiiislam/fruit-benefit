@@ -21,14 +21,12 @@ export const SettingsPanel: React.FC<SettingsPanelProps> = ({
 }) => {
   return (
     <aside
-      className={`w-64 bg-gray-100 dark:bg-gray-800 overflow-y-auto border-l border-gray-200 dark:border-gray-700 ${
+      className={`w-64 h-52 bg-white mr-2 rounded-lg dark:bg-gray-800 overflow-y-auto dark:border-gray-700 ${
         showSettings ? "block" : "hidden"
       } md:block`}
     >
-      <div className="p-4 space-y-6">
-        <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
-          Settings
-        </h2>
+      <div className="p-2 space-y-1">
+        <h2 className="text-gray-800 dark:text-white">Settings</h2>
         <FontSizeAdjuster fontSize={fontSize} setFontSize={setFontSize} />
         <VitaminTypeSelector
           vitaminType={vitaminType}

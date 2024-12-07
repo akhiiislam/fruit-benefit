@@ -27,7 +27,7 @@ export function NavBar({
   setSearchQuery,
 }: NavBarProps) {
   return (
-    <div className="flex flex-1 items-center justify-between">
+    <div className="flex flex-1 bg-white items-center justify-between">
       <img src="foodnetwork.png" alt="" height={35} width={35} />
       <div className="relative flex-1 max-w-xl mx-auto">
         <Search className="absolute left-2 top-2.5 h-4 w-4 text-muted-foreground" />

@@ -31,7 +31,7 @@ export function Sidebar({
   }, [products, searchQuery]);
 
   return (
-    <div className="w-80 border-r bg-white flex flex-col">
+    <div className="w-80 h-4/5 border-r bg-white rounded-xl flex flex-col ml-3">
       <FruitTabs />
       <div className="p-4">
         <SearchInput value={searchQuery} onChange={setSearchQuery} />
