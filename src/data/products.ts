@@ -11,19 +11,33 @@ export const products: product[] = [
       {
         title: "Supports eye health",
         description:
-          "Avocados contain lutein and zeaxanthin, which are important for eye health.",
+          "Avocados are incredibly nutrient-dense fruits known for their ability to support eye health. They contain lutein and zeaxanthin, two powerful antioxidants that play a critical role in maintaining vision. These nutrients help reduce the risk of age-related macular degeneration and cataracts, ensuring long-term eye health. Avocados are also packed with monounsaturated fats, which not only support heart health but also enhance the absorption of these eye-beneficial compounds. Regular consumption of avocados can provide an excellent source of vitamin E, an antioxidant that helps protect the eyes from oxidative stress caused by environmental factors like UV exposure.",
+
         icon: "Eye",
       },
       {
         title: "Supports heart health",
         description:
-          "Avocados are rich in monounsaturated fats, which can help reduce bad cholesterol levels.",
+          "Avocados are rich in heart-friendly monounsaturated fats, primarily oleic acid, which has been shown to reduce bad cholesterol (LDL) and increase good cholesterol (HDL) levels. They are also a great source of potassium, which helps regulate blood pressure and prevents hypertension, a major risk factor for heart disease. With their fiber content, avocados can also improve overall cardiovascular health by reducing inflammation and supporting healthy blood vessels. Including avocados in your diet can be an easy way to protect your heart and promote overall well-being.",
+        icon: "Heart",
+      },
+      {
+        title: "Supports heart health",
+        description:
+          "Avocados are rich in heart-friendly monounsaturated fats, primarily oleic acid, which has been shown to reduce bad cholesterol (LDL) and increase good cholesterol (HDL) levels. They are also a great source of potassium, which helps regulate blood pressure and prevents hypertension, a major risk factor for heart disease. With their fiber content, avocados can also improve overall cardiovascular health by reducing inflammation and supporting healthy blood vessels. Including avocados in your diet can be an easy way to protect your heart and promote overall well-being.",
+        icon: "Heart",
+      },
+      {
+        title: "Supports heart health",
+        description:
+          "Avocados are rich in heart-friendly monounsaturated fats, primarily oleic acid, which has been shown to reduce bad cholesterol (LDL) and increase good cholesterol (HDL) levels. They are also a great source of potassium, which helps regulate blood pressure and prevents hypertension, a major risk factor for heart disease. With their fiber content, avocados can also improve overall cardiovascular health by reducing inflammation and supporting healthy blood vessels. Including avocados in your diet can be an easy way to protect your heart and promote overall well-being.",
         icon: "Heart",
       },
     ],
     images: [
-      "/placeholder.svg?height=400&width=600",
-      "/placeholder.svg?height=400&width=600",
+      "https://images.immediate.co.uk/production/volatile/sites/2/2015/12/19432.jpg?quality=90&resize=556,505",
+      "https://avocadoscolombia.com/wp-content/uploads/2024/02/Avo-display-1.png",
+      "https://avocadoscolombia.com/wp-content/uploads/2024/02/Avo-display-1.png",
     ],
     rating: 4,
   },

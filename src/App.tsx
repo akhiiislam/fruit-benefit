@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { FruitContent } from "./components/FruitContent";
 import { SettingsPanel } from "./components/SettingsPanel";
 import { NavBar } from "./components/nav-bar";
 import { products } from "./data/products";
 import { Sidebar } from "./components/Sidebar";
 import VerticalNav from "./components/VerticalNav";
+import FruitContent from "./components/FruitContent";
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
