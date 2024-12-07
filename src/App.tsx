@@ -4,6 +4,7 @@ import { SettingsPanel } from "./components/SettingsPanel";
 import { NavBar } from "./components/nav-bar";
 import { products } from "./data/products";
 import { Sidebar } from "./components/Sidebar";
+import VerticalNav from "./components/VerticalNav";
 
 function App() {
   const [selectedProduct, setSelectedProduct] = useState(products[0]);
@@ -30,23 +31,26 @@ function App() {
         />
       </header>
 
-      <div className="flex flex-1 round-lg gap-x-2 mt-3 overflow-hidden bg-gray-300">
-        <Sidebar
-          products={products}
-          selectedProduct={selectedProduct}
-          onSelectProduct={setSelectedProduct}
-          searchQuery={searchQuery}
-          setSearchQuery={setSearchQuery}
-        />
-        <FruitContent fruit={selectedProduct} fontSize={fontSize} />
-        <SettingsPanel
-          fontSize={fontSize}
-          setFontSize={setFontSize}
-          vitaminType={vitaminType}
-          setVitaminType={setVitaminType}
-          showSettings={showSettings}
-          setShowSettings={setShowSettings}
-        />
+      <div className="flex flex-1">
+        <VerticalNav />
+        <div className="flex flex-1 round-lg gap-x-2 mt-3 overflow-hidden bg-gray-300">
+          <Sidebar
+            products={products}
+            selectedProduct={selectedProduct}
+            onSelectProduct={setSelectedProduct}
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+          />
+          <FruitContent fruit={selectedProduct} fontSize={fontSize} />
+          <SettingsPanel
+            fontSize={fontSize}
+            setFontSize={setFontSize}
+            vitaminType={vitaminType}
+            setVitaminType={setVitaminType}
+            showSettings={showSettings}
+            setShowSettings={setShowSettings}
+          />
+        </div>
       </div>
     </div>
   );

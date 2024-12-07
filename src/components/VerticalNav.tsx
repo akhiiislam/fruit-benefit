@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 export default function VerticalNav() {
   return (
-    <nav className="w-16 flex flex-col items-center bg-white border-r">
-      <div className="flex flex-col items-center gap-8">
+    <nav className="w-12 flex flex-col items-center bg-white border-r">
+      <div className="flex flex-col items-center gap-4">
         <Link
           to="/"
           className="p-2 rounded-lg hover:bg-gray-100 transition-colors"
