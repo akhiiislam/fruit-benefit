@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Example of dark mode classes in Tailwind */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.bg-white {
+  background-color: white;
+}
+
+.bg-gray-900 {
+  background-color: #1a202c;
+}
+
+.text-gray-800 {
+  color: #2d3748;
+}
+
+.text-white {
+  color: white;
+}
+
+.dark .bg-white {
+  background-color: #1a202c;
+}
+
+.dark .bg-gray-800 {
+  background-color: #2d3748;
+}
+
+.dark .text-gray-800 {
+  color: white;
+}
+
+.dark .text-white {
+  color: #2d3748;
+}
