@@ -52,13 +52,13 @@ export default function FruitContent({ fruit, fontSize }: FruitContentProps) {
                 <div className="flex-1 space-y-4">
                   <section>
                     <h2
-                      className="font-semibold text-gray-900 flex items-center gap-2"
+                      className="font-semibold text-gray-900 flex items-center gap-2 dark:text-white"
                       style={{ fontSize: `${fontSize + 2}px` }}
                     >
                       {benefit.title}
                     </h2>
                     <p
-                      className="text-sm text-gray-600"
+                      className="text-sm text-gray-600 dark:text-gray-300"
                       style={{ fontSize: `${fontSize}px` }}
                     >
                       {benefit.description}
@@ -108,7 +108,7 @@ export default function FruitContent({ fruit, fontSize }: FruitContentProps) {
             <h3 className="font-semibold text-gray-800 dark:text-gray-200">
               Was This Helpful?
             </h3>
-            <StarRating rating={fruit.rating} />
+            <StarRating initialRating={fruit.rating} />
             <div className="mt-4">
               <button
                 onClick={handleSubmitReview}

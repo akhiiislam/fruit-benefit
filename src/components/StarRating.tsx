@@ -2,15 +2,13 @@ import React, { useState } from "react";
 
 interface StarRatingProps {
   initialRating: number;
-  onChange: (rating: number) => void;
 }
 
-const StarRating: React.FC<StarRatingProps> = ({ initialRating, onChange }) => {
+const StarRating: React.FC<StarRatingProps> = ({ initialRating }) => {
   const [rating, setRating] = useState(initialRating);
 
   const handleClick = (newRating: number) => {
     setRating(newRating);
-    onChange(newRating);
   };
 
   return (

@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react";
 import { SettingsPanel } from "./components/SettingsPanel";
-import { NavBar } from "./components/nav-bar";
+import { NavBar } from "./components/Navbar";
 import { products } from "./data/products";
 import { Sidebar } from "./components/Sidebar";
 import VerticalNav from "./components/VerticalNav";

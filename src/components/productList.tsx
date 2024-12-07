@@ -18,7 +18,9 @@ export function ProductList({
 
   return (
     <div className="py-4">
-      <h2 className="px-4 text-sm font-medium text-gray-500 mb-2">{Title}</h2>
+      <h2 className="px-4 text-sm font-medium text-gray-500 mb-2 dark:text-gray-100">
+        {Title}
+      </h2>
       <div className="space-y-1">
         {products.map((product) => (
           <button

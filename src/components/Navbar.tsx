@@ -4,8 +4,9 @@ import { Search } from "lucide-react";
 import { Input } from "./ui/input";
 import { DarkModeToggle } from "./DarkModeToggle";
 import { Dispatch, SetStateAction } from "react";
-import { IoMenu } from "react-icons/io5";
-import { IoMdSettings } from "react-icons/io";
+
+import { LuSquareMenu } from "react-icons/lu";
+import { IoSettingsOutline } from "react-icons/io5";
 
 interface NavBarProps {
   darkMode: boolean;
@@ -41,10 +42,10 @@ export function NavBar({
       <div className="flex items-center space-x-4">
         <DarkModeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
         <button className="" onClick={() => setShowSettings(!showSettings)}>
-          <IoMdSettings size={25} />
+          <IoSettingsOutline size={25} />
         </button>
         <button className="" onClick={() => setShowSidebar(!showSidebar)}>
-          <IoMenu size={25} />
+          <LuSquareMenu size={25} />
         </button>
       </div>
     </div>
